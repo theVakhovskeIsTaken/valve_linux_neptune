@@ -8395,6 +8395,8 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
 				adev->mode_info.underscan_vborder_property,
 				0);
 
+	drm_connector_init_panel_orientation_property(&aconnector->base);
+
 	if (!aconnector->mst_port)
 		drm_connector_attach_max_bpc_property(&aconnector->base, 8, 16);
 
