@@ -1,0 +1,12 @@
+--- include/linux/mm.h
++++ include/linux/mm.h
+@@ -146,8 +146,7 @@ extern int mmap_rnd_compat_bits __read_mostly;
+  * not a hard limit any more. Although some userspace tools can be surprised by
+  * that.
+  */
+-#define MAPCOUNT_ELF_CORE_MARGIN	(5)
+-#define DEFAULT_MAX_MAP_COUNT	(USHRT_MAX - MAPCOUNT_ELF_CORE_MARGIN)
++#define DEFAULT_MAX_MAP_COUNT	(26214400000)
+ 
+ extern int sysctl_max_map_count;
+ 
