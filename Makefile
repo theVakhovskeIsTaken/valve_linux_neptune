@@ -1003,6 +1003,9 @@ KBUILD_CFLAGS   += $(call cc-option,-fconserve-stack)
 # Prohibit date/time macros, which would make the build non-deterministic
 KBUILD_CFLAGS   += -Werror=date-time
 
+# What does GCC12 want from me?
+KBUILD_CFLAGS   += -Werror=use-after-free
+
 # enforce correct pointer usage
 KBUILD_CFLAGS   += $(call cc-option,-Werror=incompatible-pointer-types)
 
